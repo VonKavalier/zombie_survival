@@ -28,7 +28,7 @@ TITLE = """
 """
 
 # Texts
-INTRO_TEXT = "[The zombie apocalypse started a few days ago. You are a survivor, alone. You managed to hide in %s with food and ammunition. Despite this, zombies surround you and get closer every day.]"
+INTRO_TEXT = "[The zombie apocalypse started a few days ago. You are a survivor, alone, and you've just been bitten. You managed to hide in %s with food and ammunition. Despite this, zombies surround you and get closer every day. Your only hope to survive is to find other survivors that can help with your infected bite. You have " + str(DAYS_TO_WIN) + " days left before the wound transform you as one of those creatures, let the countdown begin.]"
 
 ## Help
 
