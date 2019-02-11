@@ -7,14 +7,24 @@ __copyright__ = "Copyright 2018, Planet Earth"
 
 import random
 import dictionaries
+import constants
 
 class Player:
+
+
+    def get_random_location(self):
+        adjective = dictionaries.adjectives[random.randint(0, len(dictionaries.adjectives) - 1)]
+        place = dictionaries.places[random.randint(0, len(dictionaries.places) - 1)]
+
+        return adjective + " " + place
+
 
     def __init__(self, name=dictionaries.names[random.randint(0,19)]):
         self.ammo = 2
         self.food = 2
         self.hp = 3
         self.name = name
+        self.location = self.get_random_location()
 
 
     def choose_name():

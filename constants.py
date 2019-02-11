@@ -10,4 +10,19 @@ AMMO_START = 2
 FOOD_START = 2
 HP_START = 3
 
+# Title of the game
+TITLE = """
+·▄▄▄▄•      • ▌ ▄ ·. ▄▄▄▄· ▪  ▄▄▄ .     
+▪▀·.█▌▪     ·██ ▐███▪▐█ ▀█▪██ ▀▄.▀·     
+▄█▀▀▀• ▄█▀▄ ▐█ ▌▐▌▐█·▐█▀▀█▄▐█·▐▀▀▪▄     
+█▌▪▄█▀▐█▌.▐▌██ ██▌▐█▌██▄▪▐█▐█▌▐█▄▄▌     
+·▀▀▀ • ▀█▄▀▪▀▀  █▪▀▀▀·▀▀▀▀ ▀▀▀ ▀▀▀      
+.▄▄ · ▄• ▄▌▄▄▄   ▌ ▐·▪   ▌ ▐· ▄▄▄· ▄▄▌  
+▐█ ▀. █▪██▌▀▄ █·▪█·█▌██ ▪█·█▌▐█ ▀█ ██•  
+▄▀▀▀█▄█▌▐█▌▐▀▀▄ ▐█▐█•▐█·▐█▐█•▄█▀▀█ ██▪  
+▐█▄▪▐█▐█▄█▌▐█•█▌ ███ ▐█▌ ███ ▐█ ▪▐▌▐█▌▐▌
+ ▀▀▀▀  ▀▀▀ .▀  ▀. ▀  ▀▀▀. ▀   ▀  ▀ .▀▀▀ 
+"""
 
+# Texts
+INTRO_TEXT = "The zombie apocalypse started a few days ago. You are a survivor, alone. You managed to hide in %s with food and ammunition. Despite this, zombies surround you and get closer every day."

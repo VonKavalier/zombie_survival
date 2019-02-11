@@ -45,7 +45,7 @@ Arriver à un certain endroit où il se trouve y avoir des survivants en - de 20
 
 ----[TEXTE INTRO]----
 
-L'apocalypse zombie a commencé il y a de ça quelques jours. Vous êtes un survivant, seul. Vous avez réussi à vous retrancher dans (lieu alea) avec de la nourriture et des munitions. Malgré cela, des zombies vous encerclent et se rapprochent chaque jours.(On donne l'objectif)
+The zombie apocalypse started a few days ago. You are a survivor, alone. You managed to hide in %s with food and ammunition. Despite this, zombies surround you and get closer every day.
 
 ----[BASE]----
 
