@@ -19,3 +19,17 @@ class Display:
     def intro(self, location):
         """Display the introduction text."""
         print(constants.INTRO_TEXT % location)
+
+
+    def help(self, help_number):
+        """Display the help of the game."""
+        help_options = {
+                1 : constants.HELP_BASIC,
+                2 : constants.HELP_DAY,
+                3 : constants.HELP_NIGHT
+        }
+        if help_number not in range(1, len(help_options) + 1):
+            print("Wrong help number provided.")
+            return False
+
+        print(help_options[help_number])
