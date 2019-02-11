@@ -8,7 +8,6 @@ __copyright__ = "Copyright 2018, Planet Earth"
 # At the beginning
 AMMO_START = 2
 FOOD_START = 2
-HP_START = 3
 
 # Other constants
 DAYS_TO_WIN = 20
@@ -16,24 +15,26 @@ LOCATIONS_TO_WIN = 10
 
 # Title of the game
 TITLE = """
-·▄▄▄▄•      • ▌ ▄ ·. ▄▄▄▄· ▪  ▄▄▄ .     
-▪▀·.█▌▪     ·██ ▐███▪▐█ ▀█▪██ ▀▄.▀·     
-▄█▀▀▀• ▄█▀▄ ▐█ ▌▐▌▐█·▐█▀▀█▄▐█·▐▀▀▪▄     
-█▌▪▄█▀▐█▌.▐▌██ ██▌▐█▌██▄▪▐█▐█▌▐█▄▄▌     
-·▀▀▀ • ▀█▄▀▪▀▀  █▪▀▀▀·▀▀▀▀ ▀▀▀ ▀▀▀      
-.▄▄ · ▄• ▄▌▄▄▄   ▌ ▐·▪   ▌ ▐· ▄▄▄· ▄▄▌  
-▐█ ▀. █▪██▌▀▄ █·▪█·█▌██ ▪█·█▌▐█ ▀█ ██•  
-▄▀▀▀█▄█▌▐█▌▐▀▀▄ ▐█▐█•▐█·▐█▐█•▄█▀▀█ ██▪  
-▐█▄▪▐█▐█▄█▌▐█•█▌ ███ ▐█▌ ███ ▐█ ▪▐▌▐█▌▐▌
- ▀▀▀▀  ▀▀▀ .▀  ▀. ▀  ▀▀▀. ▀   ▀  ▀ .▀▀▀ 
+    ·▄▄▄▄•      • ▌ ▄ ·. ▄▄▄▄· ▪  ▄▄▄ . 
+    ▪▀·.█▌▪     ·██ ▐███▪▐█ ▀█▪██ ▀▄.▀·     
+    ▄█▀▀▀• ▄█▀▄ ▐█ ▌▐▌▐█·▐█▀▀█▄▐█·▐▀▀▪▄     
+    █▌▪▄█▀▐█▌.▐▌██ ██▌▐█▌██▄▪▐█▐█▌▐█▄▄▌     
+    ·▀▀▀ • ▀█▄▀▪▀▀  █▪▀▀▀·▀▀▀▀ ▀▀▀ ▀▀▀      
+    .▄▄ · ▄• ▄▌▄▄▄   ▌ ▐·▪   ▌ ▐· ▄▄▄· ▄▄▌  
+    ▐█ ▀. █▪██▌▀▄ █·▪█·█▌██ ▪█·█▌▐█ ▀█ ██•  
+    ▄▀▀▀█▄█▌▐█▌▐▀▀▄ ▐█▐█•▐█·▐█▐█•▄█▀▀█ ██▪  
+    ▐█▄▪▐█▐█▄█▌▐█•█▌ ███ ▐█▌ ███ ▐█ ▪▐▌▐█▌▐▌
+     ▀▀▀▀  ▀▀▀ .▀  ▀. ▀  ▀▀▀. ▀   ▀  ▀ .▀▀▀ 
 """
 
 # Texts
-INTRO_TEXT = "The zombie apocalypse started a few days ago. You are a survivor, alone. You managed to hide in %s with food and ammunition. Despite this, zombies surround you and get closer every day."
+INTRO_TEXT = "[The zombie apocalypse started a few days ago. You are a survivor, alone. You managed to hide in %s with food and ammunition. Despite this, zombies surround you and get closer every day.]"
 
 ## Help
 
 HELP_BASIC = """
+===================[BASIC HELP]======================
+
 The game is divided into days, and each day is divided in two.
 
 Every day you will have a choice between exploring or attacking the horde to reduce it.
@@ -42,10 +43,12 @@ At the end of each day you will have the choice between staying in your shelter 
 
 You win when you reach your final destination (""" + str(LOCATIONS_TO_WIN) + """th location visited) in less than """ + str(DAYS_TO_WIN) + """ days.
 You die when you have no food left.
+
+=====================================================
 """
 
 HELP_DAY = """
------ DURING THE DAY -----
+===================[DURING THE DAY]==================
 
 * EXPLORATION
 
@@ -57,10 +60,12 @@ HELP_DAY = """
     
     Your goal is to attack the horde to remove a few zombies and make exploration easier and less risky.
     You will never miss your shot, and can choose how many ammunition to use.
+   
+=====================================================
 """
 
 HELP_NIGHT = """
------ END OF DAY -----
+==================[END OF DAY]=======================
 
 * STAY IN THE SHELTER
 
@@ -68,7 +73,7 @@ HELP_NIGHT = """
     Other zombies will also join the horde.
     Only one ration of food is consumed.
 
-* ChANGE SHELTER
+* CHANGE SHELTER
     
     Only possible if you have at least 2 rations.
     The number of places visited increases by 1.
@@ -78,4 +83,6 @@ HELP_NIGHT = """
     Otherwise
     You use part of your ammunition to guarantee your escape.
     Since you change location, the horde is further away but it's size increases.
+
+=====================================================
 """

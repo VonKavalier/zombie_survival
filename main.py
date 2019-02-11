@@ -14,6 +14,46 @@ import dictionaries
 
 class Main:
 
+    # HANDLERS
+
+    def handle_help_choice(self, choice):
+        self.display.help_menu()
+        while choice != "4":
+            self.display.help_item(int(choice))
+            self.display.help_menu()
+            choice = input("\n> ")
+        self.main_menu()
+
+
+    def handle_menu_choice(self, choice):
+        if choice is "1":
+            #TODO
+            return False
+        elif choice is "2":
+            self.display.help_menu()
+            choice = input("\n> ")
+            self.handle_help_choice(choice)
+        else:
+            exit("\n [Afraid ? I knew it.]")
+
+    # /HANDLERS
+
+    
+    # MENUS
+
+    def help_menu(self):
+        self.display.help_menu()
+        choice = input("\n> ")
+        self.handle_help_choice(choice)
+
+
+    def main_menu(self):
+        self.display.title()
+        self.display.main_menu()
+        choice = input("\n> ")
+        self.handle_menu_choice(choice)
+
+    # /MENUS
 
     def __init__(self):
         self.horde = Horde()
@@ -23,8 +63,7 @@ class Main:
 
     def main(self):
         """The beginning of everything."""
-        self.display.title()
-        self.display.intro(self.player.location)
+        self.main_menu()
 
 
 if __name__ == "__main__":

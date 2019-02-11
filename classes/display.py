@@ -16,12 +16,21 @@ class Display:
         print(constants.TITLE)
 
 
+    def main_menu(self):
+        """Displays the first menu when starting the game."""
+        print("\n=====================[MAIN MENU]=====================\n")
+        print(" [1] Start a new game")
+        print(" [2] How to play")
+        print(" [3] Exit game")
+        print("\n=====================================================")
+
+
     def intro(self, location):
         """Display the introduction text."""
         print(constants.INTRO_TEXT % location)
 
 
-    def help(self, help_number):
+    def help_item(self, help_number):
         """Display the help of the game."""
         help_options = {
                 1 : constants.HELP_BASIC,
@@ -33,3 +42,12 @@ class Display:
             return False
 
         print(help_options[help_number])
+        
+    def help_menu(self):
+        """Displays the help menu."""
+        print("\n [WHAT DO YOU NEED ?]\n")
+        print(" [1] Basic help")
+        print(" [2] During the day")
+        print(" [3] During the night")
+        print(" [4] Exit help")
+
