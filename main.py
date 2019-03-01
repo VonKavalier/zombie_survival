@@ -27,6 +27,9 @@ class Main:
 
     def handle_menu_choice(self, choice):
         if choice is "1":
+            self.display.intro(self.player.location)
+            self.player.name = input("\nPlease enter your name : ")
+            self.display.infos(self.player, self.horde, self.day)
             #TODO
             return False
         elif choice is "2":
@@ -59,6 +62,7 @@ class Main:
         self.horde = Horde()
         self.display = Display()
         self.player = Player()
+        self.day = 1
 
 
     def main(self):

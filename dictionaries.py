@@ -11,3 +11,5 @@ names = ["Kristopher", "Bret", "Miles", "Trevor", "Abraham", "Randal", "Quincy",
 places = ['cabin', 'house', 'sewer', 'cinema', 'toilets', 'aircraft carcass', 'building lobby', 'fitness room', 'cybercafé', 'nursery', 'bakery shop', 'shed', 'bus', 'motorhome', 'cellar', 'fashion store', 'gymnasium', 'recording studio', 'workshop', 'hotel']
 
 adjectives = ['a mouldy', 'a dilapidated', 'an abandoned', 'a gloomy', 'an unsanitary', 'an empty', 'a morbid']
+
+states = ['depressed', 'cold', 'tired']

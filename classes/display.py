@@ -6,6 +6,7 @@ __author__ = "Tom Celestin"
 __copyright__ = "Copyright 2018, Planet Earth"
 
 import constants
+from classes.player import Player
 
 class Display:
 
@@ -18,15 +19,16 @@ class Display:
 
     def main_menu(self):
         """Displays the first menu when starting the game."""
-        print("\n=====================[MAIN MENU]=====================\n")
+        print("\n--------------------=:[MAIN MENU]:=--------------------\n")
         print(" [1] Start a new game")
         print(" [2] How to play")
         print(" [3] Exit game")
-        print("\n=====================================================")
+        print("\n-------------------------------------------------------")
 
 
     def intro(self, location):
         """Display the introduction text."""
+        print("\033[H\033[J") # Clear screen
         print(constants.INTRO_TEXT % location)
 
 
@@ -42,7 +44,8 @@ class Display:
             return False
 
         print(help_options[help_number])
-        
+
+
     def help_menu(self):
         """Displays the help menu."""
         print("\n [WHAT DO YOU NEED ?]\n")
@@ -50,4 +53,18 @@ class Display:
         print(" [2] During the day")
         print(" [3] During the night")
         print(" [4] Exit help")
+
+
+    def infos(self, player, horde, day):
+        """Displays every useful information about the game."""
+        print("\n================[YOU]================")
+        print("\n* "+player.name)
+        print("* Day : "+str(day))
+        print("* State : "+player.state)
+        print("\n==============[SHELTER]==============")
+        print("\n* "+player.location)
+        print("\n===============[STUFF]===============")
+        print("\n* Food : "+str(player.food))
+        print("* Ammo : "+str(player.ammo))
+
 

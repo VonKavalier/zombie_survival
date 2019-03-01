@@ -19,11 +19,18 @@ class Player:
         return adjective + " " + place
 
 
+    def get_random_state(self):
+        state = dictionaries.states[random.randint(0, len(dictionaries.states) - 1)]
+
+        return state
+
+
     def __init__(self, name=dictionaries.names[random.randint(0,19)]):
         self.ammo = constants.AMMO_START
         self.food = constants.FOOD_START
         self.name = name
         self.location = self.get_random_location()
+        self.state = self.get_random_state()
 
 
     def choose_name():
