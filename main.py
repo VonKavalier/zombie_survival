@@ -11,6 +11,7 @@ from classes.player import Player
 from classes.display import Display
 import constants
 import dictionaries
+import helpers
 
 class Main:
 
@@ -18,7 +19,7 @@ class Main:
 
     def handle_help_choice(self, choice):
         self.display.help_menu()
-        while choice != "4":
+        while choice != 4:
             self.display.help_item(int(choice))
             self.display.help_menu()
             choice = input("\n> ")
@@ -26,17 +27,16 @@ class Main:
 
 
     def handle_menu_choice(self, choice):
-        if choice is "1":
+        if choice is 1:
             self.display.intro(self.player.location)
-            self.player.name = input("\nPlease enter your name : ")
+            self.player.choose_name()
             self.display.infos(self.player, self.horde, self.day)
-            #TODO
             return False
-        elif choice is "2":
+        elif choice is 2:
             self.display.help_menu()
-            choice = input("\n> ")
+            choice = helpers.check_choice(4)
             self.handle_help_choice(choice)
-        else:
+        elif choice is 3:
             exit("\n [Afraid ? I knew it.]")
 
     # /HANDLERS
@@ -46,14 +46,14 @@ class Main:
 
     def help_menu(self):
         self.display.help_menu()
-        choice = input("\n> ")
+        choice = helpers.check_choice(4)
         self.handle_help_choice(choice)
 
 
     def main_menu(self):
         self.display.title()
         self.display.main_menu()
-        choice = input("\n> ")
+        choice = helpers.check_choice(3)
         self.handle_menu_choice(choice)
 
     # /MENUS

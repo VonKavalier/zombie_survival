@@ -101,3 +101,5 @@ HELP_NIGHT = """
 
 -----------------------------------------------------
 """
+
+CHOICE_NOT_VALID = "Not a valid choice."
