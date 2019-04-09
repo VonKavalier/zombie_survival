@@ -12,6 +12,7 @@ from classes.display import Display
 import constants
 import dictionaries
 import helpers
+import actions
 
 class Main:
 
@@ -23,14 +24,17 @@ class Main:
             self.display.help_item(int(choice))
             self.display.help_menu()
             choice = input("\n> ")
-        self.main_menu()
+        if self.in_game:
+            self.actions()
+        else:
+            self.main_menu()
 
 
     def handle_menu_choice(self, choice):
         if choice is 1:
             self.display.intro(self.player.location)
             self.player.choose_name()
-            self.display.infos(self.player, self.horde, self.day)
+            self.adventure()
             return False
         elif choice is 2:
             self.display.help_menu()
@@ -38,6 +42,22 @@ class Main:
             self.handle_help_choice(choice)
         elif choice is 3:
             exit("\n [Afraid ? I knew it.]")
+
+
+    def handle_actions_choice(self, choice):
+        if choice is 3:
+            self.help_menu()
+
+        if self.am:
+            if choice is 1:
+                actions.scavenge()
+            if choice is 2:
+                actions.shoot()
+        else:
+            if choice is 1:
+                actions.move()
+            if choice is 2:
+                actions.stay()
 
     # /HANDLERS
 
@@ -56,13 +76,36 @@ class Main:
         choice = helpers.check_choice(3)
         self.handle_menu_choice(choice)
 
+
+    def actions(self):
+        if self.am:
+            self.display.actions_day()
+            choice_day = helpers.check_choice(3)
+            self.handle_actions_choice(choice_day)
+            self.am = False
+            self.day+=1
+        else:
+            self.display.actions_night()
+
     # /MENUS
 
+
+    def adventure(self):
+        self.in_game = True
+        while not helpers.check_end(self.day, self.player, self.horde):
+            self.display.infos(self.player, self.horde, self.day, self.am)
+            self.actions()
+        else:
+            print("the end")
+
+
     def __init__(self):
+        self.in_game = False
         self.horde = Horde()
         self.display = Display()
         self.player = Player()
         self.day = 1
+        self.am = True
 
 
     def main(self):

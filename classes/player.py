@@ -33,8 +33,10 @@ class Player:
     def __init__(self, name=dictionaries.names[random.randint(0,19)]):
         self.ammo = constants.AMMO_START
         self.food = constants.FOOD_START
+        self.health = constants.HEALTH_START
         self.name = name
         self.location = self.get_random_location()
+        self.locations_counter = 1
         self.state = self.get_random_state()
 
 

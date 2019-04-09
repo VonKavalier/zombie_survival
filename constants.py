@@ -8,6 +8,7 @@ __copyright__ = "Copyright 2018, Planet Earth"
 # At the beginning
 AMMO_START = 2
 FOOD_START = 2
+HEALTH_START = 5
 
 # Other constants
 DAYS_TO_WIN = 20

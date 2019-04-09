@@ -37,8 +37,9 @@ class Display:
         help_options = {
                 1 : constants.HELP_BASIC,
                 2 : constants.HELP_DAY,
-                3 : constants.HELP_NIGHT
+                3 : constants.HELP_NIGHT,
         }
+
         if help_number not in range(1, len(help_options) + 1):
             print("Wrong help number provided.")
             return False
@@ -55,16 +56,39 @@ class Display:
         print(" [4] Exit help")
 
 
-    def infos(self, player, horde, day):
+    def actions_day(self):
+        """Displays the actions of the day."""
+        print("\n [WHAT WILL YOU DO DURING THE DAY?]\n")
+        print(" [1] Scavenge")
+        print(" [2] Shoot to reduce the horde")
+        print(" [3] Display help")
+
+
+    def actions_night(self):
+        """Displays the night"""
+        print("\n [WHAT WILL YOU DO DURING THE NIGHT?]\n")
+        print(" [1] Move to the next shelter")
+        print(" [2] Stay in the shelter")
+        print(" [3] Display help")
+
+
+    def infos(self, player, horde, day, am):
         """Displays every useful information about the game."""
         print("\n================[YOU]================")
         print("\n* "+player.name)
+        print("* Health : "+str(player.health))
         print("* Day : "+str(day))
+        if am:
+            print("* Period : daytime")
+        else:
+            print("* Period : dusk")
         print("* State : "+player.state)
         print("\n==============[SHELTER]==============")
         print("\n* "+player.location)
+        print("* "+str(player.locations_counter)+"/10")
         print("\n===============[STUFF]===============")
         print("\n* Food : "+str(player.food))
         print("* Ammo : "+str(player.ammo))
+        print("\n=====================================")
 
 

@@ -29,3 +29,8 @@ def check_range(choice, choices):
         except ValueError:
             check_choice(choices)
     return choice
+
+def check_end(days, player, horde):
+    if player.locations_counter == constants.LOCATIONS_TO_WIN or player.health < 1 or horde.distance < 1 or days == constants.DAYS_TO_WIN:
+        return True
+    return False
