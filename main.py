@@ -50,14 +50,14 @@ class Main:
 
         if self.am:
             if choice is 1:
-                actions.scavenge()
+                self.player.scavenge(horde)
             if choice is 2:
-                actions.shoot()
+                self.player.shoot()
         else:
             if choice is 1:
-                actions.move()
+                self.player.move()
             if choice is 2:
-                actions.stay()
+                self.player.stay()
 
     # /HANDLERS
 

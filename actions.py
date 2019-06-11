@@ -6,9 +6,12 @@ __author__ = "Tom Celestin"
 __copyright__ = "Copyright 2018, Planet Earth"
 
 import constants
+import random
 
-def scavenge():
-   print("scavenge")
+
+def scavenge(player, horde):
+    if horde.
+    return 
 
 
 def shoot():

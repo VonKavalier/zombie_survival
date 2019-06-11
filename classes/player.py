@@ -30,6 +30,7 @@ class Player:
         if not self.name:
             self.name = dictionaries.names[random.randint(0,19)]
 
+
     def __init__(self, name=dictionaries.names[random.randint(0,19)]):
         self.ammo = constants.AMMO_START
         self.food = constants.FOOD_START
@@ -39,4 +40,8 @@ class Player:
         self.locations_counter = 1
         self.state = self.get_random_state()
 
+
+    def scavenge(self, horde):
+        food = 0
+        ammo = 0
 
